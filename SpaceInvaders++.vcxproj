@@ -140,7 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BitmapStore.h" />
-    <ClInclude Include="DevelopmentState.h" />
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="ScreenManager.h" />
     <ClInclude Include="SoundEngine.h" />
