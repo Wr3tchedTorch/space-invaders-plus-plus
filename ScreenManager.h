@@ -36,19 +36,19 @@ public:
 		m_Screens[m_CurrentScreen].initialize();
 	}
 
-	void ScreenManagerRemoteControll::loadLevelInPlayMode(std::string screenToLoad)
+	void ScreenManagerRemoteControl::loadLevelInPlayMode(std::string screenToLoad)
 	{
 		//m_LevelManager.getGameObjects().clear();
 		//m_LevelManager.loadGameObjectsForPlayMode(screenToLoad);
 		switchScreens("Game");
 	}
 
-	//vector<GameObjects>& ScreenManagerRemoteControll::getGameObjects()
+	//vector<GameObjects>& ScreenManagerRemoteControl::getGameObjects()
 	//{
 	//	return m_LevelManager.getGameObjects();
 	//}
 
-	//GameObjectSharer& shareGameObjectSharer()
+	//GameObjectSharer& ScreenManagerRemoteControl::shareGameObjectSharer()
 	//{
 	//	return m_LevelManager;
 	//}

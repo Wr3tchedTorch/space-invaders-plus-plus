@@ -41,7 +41,7 @@ void BitmapStore::addTexture(const std::string& filepath)
 	if (!texture.loadFromFile(filepath))
 	{
 		#ifdef _DEBUG
-		std::cout << std::format("BitmapStore::addTexture(const std::string& filepath): file not found: `{}`", filepath);
+		std::cout << std::format("BitmapStore::addTexture(const std::string& filepath): file is either incompatible or missing: `{}`", filepath);
 		#endif
 	}
 }

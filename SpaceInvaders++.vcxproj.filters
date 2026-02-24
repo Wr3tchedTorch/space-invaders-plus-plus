@@ -63,6 +63,12 @@
     <ClInclude Include="BitmapStore.h">
       <Filter>Header Files\Engine</Filter>
     </ClInclude>
+    <ClInclude Include="ScreenManagerRemoteControl.h">
+      <Filter>Header Files\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Header Files\Screens</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -79,6 +85,9 @@
     </ClCompile>
     <ClCompile Include="BitmapStore.cpp">
       <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Source Files\Screens</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
