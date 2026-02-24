@@ -20,7 +20,7 @@ void GameEngine::run()
 	while (m_Window.isOpen())
 	{
 		m_DeltaTime = m_Clock.restart();
-		m_FPS = m_DeltaTime.asSeconds();
+		m_Delta = m_DeltaTime.asSeconds();
 		
 		handleInput();
 		update();
@@ -35,7 +35,7 @@ void GameEngine::handleInput()
 
 void GameEngine::update()
 {
-	m_ScreenManager->update(m_FPS);
+	m_ScreenManager->update(m_Delta);
 }
 
 void GameEngine::draw()

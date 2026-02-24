@@ -15,7 +15,7 @@ private:
 
 	sf::Clock m_Clock;
 	sf::Time  m_DeltaTime;
-	float m_FPS = 0;
+	float m_Delta = 0;
 
 	std::unique_ptr<ScreenManager> m_ScreenManager;
 
