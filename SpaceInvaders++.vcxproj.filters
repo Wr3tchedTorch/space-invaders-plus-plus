@@ -107,5 +107,8 @@
     <ClCompile Include="Screen.cpp">
       <Filter>Source Files\Screens</Filter>
     </ClCompile>
+    <ClCompile Include="WorldState.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
