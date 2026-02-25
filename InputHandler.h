@@ -1,8 +1,10 @@
 #pragma once
-#include <SFML/Graphics.hpp>
-#include <SFML/Graphics/View.hpp>
 #include <memory>
 #include <vector>
+#include <string>
+#include <SFML/Graphics/View.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Window/Event.hpp>
 #include "ScreenManagerRemoteControl.h"
 #include "Button.h"
 
@@ -29,7 +31,7 @@ public:
 	virtual void handleGamepad();
 	virtual void handleKeyPressed(sf::Event& event, sf::RenderWindow& window);
 	virtual void handleKeyReleased(sf::Event& event, sf::RenderWindow& window);
-	virtual void handleLeftMouseClick(std::string& buttonInteractedWith, sf::RenderWindow& window);
+	virtual void handleLeftMouseClick(const std::string& buttonInteractedWith, sf::RenderWindow& window);
 
 	sf::View* getPointerToView();
 	Screen* getPointerToParentScreen();
