@@ -135,6 +135,7 @@
     <ClCompile Include="BitmapStore.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="GameEngine.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="ScreenManager.cpp" />
     <ClCompile Include="SoundEngine.cpp" />
@@ -144,6 +145,7 @@
     <ClInclude Include="BitmapStore.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="GameEngine.h" />
+    <ClInclude Include="InputHandler.h" />
     <ClInclude Include="ScreenManager.h" />
     <ClInclude Include="ScreenManagerRemoteControl.h" />
     <ClInclude Include="SoundEngine.h" />
