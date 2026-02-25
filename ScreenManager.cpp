@@ -1,7 +1,7 @@
 #include "ScreenManager.h"
 #include <SFML/System/Vector2.hpp>
 
-ScreenManager::ScreenManager(sf::Vector2i resolution)
+ScreenManager::ScreenManager(sf::Vector2u resolution)
 {
 	m_Screens["Game"]   = std::unique_ptr<GameScreen>(new GameScreen(this, resolution));
 	m_Screens["Select"] = std::unique_ptr<SelectScreen>(new SelectScreen(this, resolution));

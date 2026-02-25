@@ -24,7 +24,7 @@ protected:
 public:
 	BitmapStore m_BitmapStore;
 	
-	ScreenManager(sf::Vector2i resolution);
+	ScreenManager(sf::Vector2u resolution);
 	
 	void handleInput(sf::RenderWindow& window);
 	void update(float delta);

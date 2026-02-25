@@ -12,7 +12,7 @@ GameEngine::GameEngine()
 	m_Resolution = sf::Vector2f(desktopVideoMode.size);
 	m_Window.create(desktopVideoMode, "Space Invaders++ by Eric", sf::State::Fullscreen);
 
-	m_ScreenManager = std::unique_ptr<ScreenManager>(new ScreenManager(sf::Vector2i(m_Resolution)));
+	m_ScreenManager = std::unique_ptr<ScreenManager>(new ScreenManager(sf::Vector2u(m_Resolution)));
 }
 
 void GameEngine::run()

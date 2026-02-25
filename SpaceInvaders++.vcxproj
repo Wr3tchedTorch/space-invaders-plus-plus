@@ -135,6 +135,8 @@
     <ClCompile Include="BitmapStore.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="GameEngine.cpp" />
+    <ClCompile Include="SelectInputHandler.cpp" />
+    <ClCompile Include="SelectScreen.cpp" />
     <ClCompile Include="WorldState.h" />
     <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -151,6 +153,8 @@
     <ClInclude Include="Screen.h" />
     <ClInclude Include="ScreenManager.h" />
     <ClInclude Include="ScreenManagerRemoteControl.h" />
+    <ClInclude Include="SelectInputHandler.h" />
+    <ClInclude Include="SelectScreen.h" />
     <ClInclude Include="SoundEngine.h" />
     <ClInclude Include="UIPanel.h" />
   </ItemGroup>
