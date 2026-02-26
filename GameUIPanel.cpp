@@ -31,11 +31,8 @@ void GameUIPanel::draw(sf::RenderTarget& target)
 {
 	show();
 	UIPanel::draw(target);
-	target.draw(m_Text);
-}
-
-void GameUIPanel::updateText()
-{
+	
 	std::string updatedText = std::format("Score: {} Lives: {} Wave: {}", WorldState::SCORE, WorldState::LIVES, WorldState::WAVE_NUMBER);
 	m_Text.setString(updatedText);
+	target.draw(m_Text);
 }

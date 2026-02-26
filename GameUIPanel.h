@@ -10,7 +10,5 @@ public:
 	GameUIPanel(sf::Vector2u resolution);
 	
 	void draw(sf::RenderTarget& target) override;
-	
-	void updateText();
 };
 
