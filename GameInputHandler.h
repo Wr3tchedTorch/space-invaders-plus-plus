@@ -1,5 +1,6 @@
 #pragma once
 #include "InputHandler.h"
+#include <SFML/Graphics/RenderWindow.hpp>
 
 class GameInputHandler : public InputHandler
 {
