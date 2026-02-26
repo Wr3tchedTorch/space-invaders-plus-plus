@@ -5,6 +5,8 @@
 #include <SFML/System/Vector2.hpp>
 #include <SFML/Graphics/Font.hpp>
 #include "UIPanel.h"
+#include <iostream>
+#include <format>
 
 void SelectUIPanel::initializeButtons()
 {
@@ -31,8 +33,8 @@ SelectUIPanel::SelectUIPanel(sf::Vector2u resolution) :
 	UIPanel(
 		resolution,
 		{
-			{ (resolution.x / 10) * 2, resolution.y / 3 },
-			{ (resolution.x / 10) * 6, resolution.y / 3 }
+			{ (resolution.x / 10.0f) * 2, resolution.y / 3.0f },
+			{ (resolution.x / 10.0f) * 6, resolution.y / 3.0f }
 		},
 		sf::Color(255, 255, 255, 50)
 	)
@@ -41,9 +43,9 @@ SelectUIPanel::SelectUIPanel(sf::Vector2u resolution) :
 	m_ButtonSize.x  = resolution.x / 20.0f;
 	m_ButtonSize.y  = resolution.y / 20.0f;
 
-	sf::Font font("fonts/Roboto-Bold.ttf");
+	m_Font.openFromFile("fonts/Roboto-Bold.ttf");
 
-	m_Text.setFont(font);
+	m_Text.setFont(m_Font);
 	m_Text.setString("Space Invaders ++");
 	m_Text.setFillColor(sf::Color(255, 0, 0, 255));
 	m_Text.setCharacterSize(160);
@@ -52,8 +54,13 @@ SelectUIPanel::SelectUIPanel(sf::Vector2u resolution) :
 	initializeButtons();
 }
 
-void SelectUIPanel::draw(sf::RenderTarget& target, sf::RenderStates states) const
+void SelectUIPanel::draw(sf::RenderTarget& target)
 {
-	UIPanel::draw(target, states);	
+	show();
+	UIPanel::draw(target);	
 	target.draw(m_Text);
+
+	#ifdef _DEBUG
+	std::cout << std::format("\nHidden: {}", m_Hidden);
+	#endif
 }

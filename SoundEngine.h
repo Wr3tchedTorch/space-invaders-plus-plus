@@ -15,12 +15,16 @@ private:
 	sf::Sound m_PlayerExplosionSound;
 	sf::Sound m_ClickSound;
 
-	static SoundEngine* m_Instance;
-	
 	SoundEngine();
-public:
 
-	static void createInstance();
+	SoundEngine(const SoundEngine&) = delete;
+	void operator=(const SoundEngine&) = delete;
+
+	static SoundEngine& getInstance() {
+		static SoundEngine instance;
+		return instance;
+	};
+public:
 
 	static void playShoot();
 	static void playInvaderExplosion();

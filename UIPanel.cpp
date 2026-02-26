@@ -46,7 +46,7 @@ void UIPanel::hide()
 	m_Hidden = true;
 }
 
-void UIPanel::draw(sf::RenderTarget& target, sf::RenderStates states) const
+void UIPanel::draw(sf::RenderTarget& target) 
 {
 	if (m_Hidden)
 	{

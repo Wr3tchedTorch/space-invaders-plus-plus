@@ -9,20 +9,19 @@
 #include <SFML/System/Vector2.hpp>
 #include <SFML/Graphics/View.hpp>
 #include <SFML/Graphics/RectangleShape.hpp>
-#include <SFML/Graphics/Drawable.hpp>
-#include <SFML/Graphics/RenderStates.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
 #include "Button.h"
 
-class UIPanel : public sf::Drawable
+class UIPanel
 {
 private:
 	std::vector<std::shared_ptr<Button>> m_Buttons;
 	
 	sf::RectangleShape m_Background;
-	bool m_Hidden = false;	
 
 protected:
+	bool m_Hidden = false;	
+
 	sf::Vector2f m_ButtonSize;
 	float m_ButtonPadding = 0;
 
@@ -41,6 +40,6 @@ public:
 	void show();
 	void hide();	
 
-	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+	virtual void draw(sf::RenderTarget& target);
 };
 

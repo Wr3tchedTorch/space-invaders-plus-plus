@@ -3,7 +3,6 @@
 #include <string>
 #include <SFML/Graphics/Color.hpp>
 #include <SFML/Graphics/Font.hpp>
-#include <SFML/Graphics/RenderStates.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/System/Vector2.hpp>
 #include "WorldState.h"
@@ -14,7 +13,7 @@ GameUIPanel::GameUIPanel(sf::Vector2u resolution) :
 		resolution,
 		{
 			{ 1, 1 },
-			{ resolution.x / 3, resolution.y / 12}
+			{ resolution.x / 3.0f, resolution.y / 12.0f}
 		},
 		sf::Color(255, 255, 255, 50)
 	)
@@ -28,10 +27,10 @@ GameUIPanel::GameUIPanel(sf::Vector2u resolution) :
 	m_Text.setCharacterSize(60);
 }
 
-void GameUIPanel::draw(sf::RenderTarget& target, sf::RenderStates states) const
+void GameUIPanel::draw(sf::RenderTarget& target)
 {
-	UIPanel::draw(target, states);
-
+	show();
+	UIPanel::draw(target);
 	target.draw(m_Text);
 }
 

@@ -97,7 +97,10 @@
       <Filter>Header Files\Screens\Game</Filter>
     </ClInclude>
     <ClInclude Include="GameOverInputHandler.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Screens\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOverUIPanel.h">
+      <Filter>Header Files\Screens\Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -149,8 +152,14 @@
     <ClCompile Include="GameUIPanel.cpp">
       <Filter>Source Files\Screens\Game</Filter>
     </ClCompile>
+    <ClCompile Include="GameOverUIPanel.cpp">
+      <Filter>Source Files\Screens\Game</Filter>
+    </ClCompile>
     <ClCompile Include="GameOverInputHandler.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Screens\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldState.cpp">
+      <Filter>Source Files\Engine</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

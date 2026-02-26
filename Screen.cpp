@@ -24,11 +24,11 @@ void Screen::update(float delta)
 {
 }
 
-void Screen::draw(sf::RenderTarget& target, sf::RenderStates states) const
-{
+void Screen::draw(sf::RenderTarget& target)
+{	
 	for (auto& panel : m_UIPanels)
 	{
-		target.draw(*panel);
+		panel->draw(target);
 	}
 }
 

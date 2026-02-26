@@ -9,7 +9,7 @@ class GameUIPanel : public UIPanel
 public:
 	GameUIPanel(sf::Vector2u resolution);
 	
-	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+	void draw(sf::RenderTarget& target) override;
 	
 	void updateText();
 };

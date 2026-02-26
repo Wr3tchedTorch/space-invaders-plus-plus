@@ -6,6 +6,8 @@
 #include <utility>
 #include "ScreenManagerRemoteControl.h"
 #include "Screen.h"
+#include "SelectUIPanel.h"
+#include "SelectInputHandler.h"
 
 SelectScreen::SelectScreen(ScreenManagerRemoteControl* screenManagerRemoteControl, sf::Vector2u resolution, sf::Texture& backgroundTexture) :
 	m_BackgroundTexture(backgroundTexture),
@@ -22,10 +24,10 @@ SelectScreen::SelectScreen(ScreenManagerRemoteControl* screenManagerRemoteContro
 	m_BackgroundSprite.setScale({ m_View.getSize().x / textureSize.x, m_View.getSize().y / textureSize.y });
 }
 
-void SelectScreen::draw(sf::RenderTarget& target, sf::RenderStates states) const
+void SelectScreen::draw(sf::RenderTarget& target)
 {
 	target.setView(m_View);
 	target.draw(m_BackgroundSprite);
 	
-	Screen::draw(target, states);	
+	Screen::draw(target);	
 }

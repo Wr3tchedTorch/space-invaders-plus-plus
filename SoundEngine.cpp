@@ -1,8 +1,6 @@
 #include "SoundEngine.h"
 #include <cassert>
 
-SoundEngine* SoundEngine::m_Instance = nullptr;
-
 SoundEngine::SoundEngine() :
 	m_ShootBuffer("sounds/shoot.wav"),
 	m_InvaderExplosionBuffer("sounds/click.wav"),
@@ -16,29 +14,22 @@ SoundEngine::SoundEngine() :
 {
 }
 
-void SoundEngine::createInstance()
-{
-	assert(m_Instance == nullptr);
-
-	m_Instance = new SoundEngine();
-}
-
 void SoundEngine::playShoot()
 {
-	m_Instance->m_ShootSound.play();
+	getInstance().m_ShootSound.play();
 }
 
 void SoundEngine::playInvaderExplosion()
 {
-	m_Instance->m_InvaderExplosionSound.play();
+	getInstance().m_InvaderExplosionSound.play();
 }
 
 void SoundEngine::playPlayerExplosion()
 {
-	m_Instance->m_PlayerExplosionSound.play();
+	getInstance().m_PlayerExplosionSound.play();
 }
 
 void SoundEngine::playClick()
 {
-	m_Instance->m_ClickSound.play();
+	getInstance().m_ClickSound.play();
 }

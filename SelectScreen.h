@@ -16,6 +16,6 @@ private:
 
 public:
 	SelectScreen(ScreenManagerRemoteControl* screenManagerRemoteControl, sf::Vector2u resolution, sf::Texture& backgroundTexture);
-	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+	void draw(sf::RenderTarget& target) override;
 };
 

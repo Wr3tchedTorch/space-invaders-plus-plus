@@ -3,11 +3,10 @@
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/System/Vector2.hpp>
-#include <SFML/Graphics/RenderStates.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
 #include "Screen.h"
 #include "ScreenManagerRemoteControl.h"
-#include "GameInputHandler.h";
+#include "GameInputHandler.h"
 
 class GameScreen : public Screen
 {
@@ -25,6 +24,6 @@ public:
 	
 	void initialize() override;
 	void update(float delta) override;
-	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+	void draw(sf::RenderTarget& target) override;
 };
 

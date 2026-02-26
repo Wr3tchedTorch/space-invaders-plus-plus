@@ -1,8 +1,6 @@
 #pragma once
 #include <vector>
 #include <memory>
-#include <SFML/Graphics/Drawable.hpp>
-#include <SFML/Graphics/RenderStates.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/View.hpp>
@@ -10,7 +8,7 @@
 #include "UIPanel.h"
 #include "ScreenManagerRemoteControl.h"
 
-class Screen : public sf::Drawable
+class Screen
 {
 private:
 	std::vector<std::shared_ptr<InputHandler>> m_InputHandlers;
@@ -29,7 +27,7 @@ public:
 	virtual void initialize();
 	
 	virtual void update(float delta);
-	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+	virtual void draw(sf::RenderTarget& target);
 	virtual void handleInput(sf::RenderWindow& window);
 };
 

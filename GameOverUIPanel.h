@@ -1,16 +1,15 @@
 #pragma once
-#include <SFML/Graphics/RenderStates.hpp>
+#include "UIPanel.h"
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/System/Vector2.hpp>
-#include "UIPanel.h"
 
-class SelectUIPanel : public UIPanel
+class GameOverUIPanel : public UIPanel
 {
 private:
 	void initializeButtons();
 
 public:
-	SelectUIPanel(sf::Vector2u resolution);
+	GameOverUIPanel(sf::Vector2u resolution);
 
 	void draw(sf::RenderTarget& target) override;
 };
