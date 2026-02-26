@@ -1,5 +1,15 @@
 #include "GameScreen.h"
+#include <SFML/Graphics/RenderStates.hpp>
+#include <SFML/Graphics/RenderTarget.hpp>
+#include <SFML/Graphics/Texture.hpp>
+#include <SFML/System/Vector2.hpp>
 #include "WorldState.h"
+#include "Screen.h"
+#include "ScreenManagerRemoteControl.h"
+#include "GameInputHandler.h";
+#include "GameOverInputHandler.h";
+#include "GameUIPanel.h";
+#include "GameOverUIPanel.h";
 
 GameScreen::GameScreen(sf::Vector2u resolution, ScreenManagerRemoteControl* screenManagerRemoteControl, sf::Texture& backgroundTexture) :
 	m_BackgroundTexture(backgroundTexture),

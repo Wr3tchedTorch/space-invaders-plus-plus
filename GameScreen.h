@@ -3,10 +3,11 @@
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/System/Vector2.hpp>
-#include "Screen.h"
-#include "ScreenManagerRemoteControl.h"
 #include <SFML/Graphics/RenderStates.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
+#include "Screen.h"
+#include "ScreenManagerRemoteControl.h"
+#include "GameInputHandler.h";
 
 class GameScreen : public Screen
 {
