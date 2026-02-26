@@ -47,7 +47,7 @@ SelectUIPanel::SelectUIPanel(sf::Vector2u resolution) :
 
 	m_Text.setFont(m_Font);
 	m_Text.setString("Space Invaders ++");
-	m_Text.setFillColor(sf::Color(255, 0, 0, 255));
+	m_Text.setFillColor(sf::Color(0, 255, 0, 255));
 	m_Text.setCharacterSize(160);
 	m_Text.setPosition({m_ButtonPadding, m_ButtonSize.y + m_ButtonPadding * 2});
 
@@ -59,8 +59,4 @@ void SelectUIPanel::draw(sf::RenderTarget& target)
 	show();
 	UIPanel::draw(target);	
 	target.draw(m_Text);
-
-	#ifdef _DEBUG
-	std::cout << std::format("\nHidden: {}", m_Hidden);
-	#endif
 }
