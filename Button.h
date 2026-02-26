@@ -23,8 +23,8 @@ public:
 
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const override 
 	{
-		target.draw(m_Text,		  states);
 		target.draw(m_Background, states);
+		target.draw(m_Text,		  states);
 	}
 };
 

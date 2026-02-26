@@ -20,7 +20,7 @@ void GameOverUIPanel::initializeButtons()
 
 	addButton(
 		{
-			{m_ButtonPadding, m_ButtonPadding * 2 + m_ButtonSize.y},
+			{m_ButtonPadding * 2 + m_ButtonSize.x, m_ButtonPadding},
 			{m_ButtonSize.x,  m_ButtonSize.y}
 		},
 		sf::Color(255, 0, 0, 255),
@@ -39,15 +39,16 @@ GameOverUIPanel::GameOverUIPanel(sf::Vector2u resolution) :
 	)
 {
 	m_ButtonPadding = resolution.x / 100.0f;
-	m_ButtonSize.x  = resolution.x / 20.0f;
+	m_ButtonSize.x  = resolution.x / 15.0f;
 	m_ButtonSize.y  = resolution.y / 20.0f;
 
 	m_Text.setFillColor(sf::Color(0, 255, 0, 255));
-	m_Text.setCharacterSize(160);
+	m_Text.setCharacterSize(60);
 	
-	sf::Font font("fonts/Roboto-Bold.ttf");
-	m_Text.setFont(font);
+	m_Font.openFromFile("fonts/Roboto-Bold.ttf");
+	m_Text.setFont(m_Font);
 	m_Text.setPosition({m_ButtonPadding, m_ButtonPadding * 2 + m_ButtonSize.y});
+	m_Text.setString("GAME OVER!");
 
 	initializeButtons();
 }

@@ -13,7 +13,7 @@ GameUIPanel::GameUIPanel(sf::Vector2u resolution) :
 		resolution,
 		{
 			{ 1, 1 },
-			{ resolution.x / 3.0f, resolution.y / 12.0f}
+			{ resolution.x / 2.5f, resolution.y / 12.0f}
 		},
 		sf::Color(255, 255, 255, 50)
 	)
@@ -21,8 +21,8 @@ GameUIPanel::GameUIPanel(sf::Vector2u resolution) :
 	m_Text.setFillColor(sf::Color(0, 255, 0, 255));
 	m_Text.setString("Score: 0 Lives: 3 Wave: 1");
 	
-	sf::Font font("fonts/Roboto-Bold.ttf");
-	m_Text.setFont(font);
+	m_Font.openFromFile("fonts/Roboto-Bold.ttf");
+	m_Text.setFont(m_Font);
 	m_Text.setPosition({ 15, 15 });
 	m_Text.setCharacterSize(60);
 }

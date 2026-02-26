@@ -66,7 +66,7 @@ void GameScreen::update(float delta)
 		return;
 	}
 
-	if (WorldState::LIVES <= 0)
+	if (true)
 	{
 		m_GameOver = true;
 		return;

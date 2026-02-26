@@ -2,10 +2,10 @@
 #include <cassert>
 
 SoundEngine::SoundEngine() :
-	m_ShootBuffer("sounds/shoot.wav"),
-	m_InvaderExplosionBuffer("sounds/click.wav"),
-	m_PlayerExplosionBuffer("sounds/click.wav"),
-	m_ClickBuffer("sounds/click.wav"),
+	m_ShootBuffer("sound/shoot.ogg"),
+	m_InvaderExplosionBuffer("sound/invaderexplode.ogg"),
+	m_PlayerExplosionBuffer("sound/playerexplode.ogg"),
+	m_ClickBuffer("sound/click.ogg"),
 
 	m_ShootSound(m_ShootBuffer),
 	m_ClickSound(m_ClickBuffer),

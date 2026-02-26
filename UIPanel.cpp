@@ -17,11 +17,10 @@ void UIPanel::addButton(sf::FloatRect bounds, sf::Color color, std::string text)
 UIPanel::UIPanel(sf::Vector2u resolution, sf::FloatRect bounds, sf::Color color) : m_Text(m_Font, "")
 {
 	m_Background.setSize(bounds.size);
-	m_Background.setPosition(bounds.position);
 	m_Background.setFillColor(color);
 
 	m_View.setSize(bounds.size);
-	m_View.setCenter({ bounds.size.x / 2, bounds.size.x / 2 });
+	m_View.setCenter({ bounds.size.x / 2, bounds.size.y / 2 });
 
 	float viewportStartX = bounds.position.x / resolution.x;
 	float viewportStartY = bounds.position.y / resolution.y;
@@ -48,13 +47,13 @@ void UIPanel::hide()
 
 void UIPanel::draw(sf::RenderTarget& target) 
 {
+	target.setView(m_View);
 	if (m_Hidden)
 	{
 		return;
 	}
-	target.setView(m_View);
 	target.draw(m_Background);
-	for (const auto& button : m_Buttons)
+	for (auto& button : m_Buttons)
 	{
 		target.draw(*button);
 	}
