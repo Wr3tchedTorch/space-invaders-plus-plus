@@ -134,6 +134,8 @@
   <ItemGroup>
     <ClCompile Include="BitmapStore.cpp" />
     <ClCompile Include="Button.cpp" />
+    <ClCompile Include="ColliderComponent.cpp" />
+    <ClCompile Include="Component.cpp" />
     <ClCompile Include="GameEngine.cpp" />
     <ClCompile Include="GameInputHandler.cpp" />
     <ClCompile Include="GameOverInputHandler.cpp" />
@@ -155,6 +157,8 @@
   <ItemGroup>
     <ClInclude Include="BitmapStore.h" />
     <ClInclude Include="Button.h" />
+    <ClInclude Include="ColliderComponent.h" />
+    <ClInclude Include="Component.h" />
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="GameInputHandler.h" />
     <ClInclude Include="GameOverInputHandler.h" />
