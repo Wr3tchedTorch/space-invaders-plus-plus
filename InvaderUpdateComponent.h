@@ -21,12 +21,12 @@ private:
 	bool  m_MovingRight = false;
 	float m_TimeSinceLastShot = 0.0f;
 	float m_TimeBetweenShots  = 5.0f;
-	float m_SpeedModifier;
-	float m_AccuracyModifier = 0.05f;
+	float m_SpeedModifier	 = 0.05f;
+	float m_AccuracyModifier;
 	int m_RandSeed;
 
 public:
-	void switchSidesAndReverse();
+	void dropDownAndReverse();
 	bool isMovingRight();
 	void initializeBulletSpawner(BulletSpawner bulletSpawner, int randSeed);
 
