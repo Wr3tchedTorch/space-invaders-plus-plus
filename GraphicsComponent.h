@@ -1,16 +1,16 @@
 #pragma once
-#include <string>
 #include "Component.h"
-#include "GameObjectSharer.h"
-#include "GameObject.h"
+#include <SFML/Graphics/RenderTarget.hpp>
+#include "TransformComponent.g"
 
-class ColliderComponent : Component
+class GraphicsComponent : Component
 {
-private:
+	std::string m_Type = "graphics";
 	bool m_Enabled = false;
-	std::string m_Type = "collider";
 
 public:
+	virtual void draw(sf::RenderTarget& target, std::shared_ptr<TransformComponent> transformComponent) = 0;
+
 	std::string getType() override;
 	std::string getSpecificType() override;
 	void enable() override;
