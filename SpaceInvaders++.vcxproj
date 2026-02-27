@@ -148,6 +148,7 @@
     <ClCompile Include="SelectScreen.cpp" />
     <ClCompile Include="SelectUIPanel.cpp" />
     <ClCompile Include="StandardGraphicsComponent.cpp" />
+    <ClCompile Include="TransformComponent.cpp" />
     <ClCompile Include="WorldState.cpp" />
     <ClCompile Include="WorldState.h" />
     <ClCompile Include="InputHandler.cpp" />
@@ -179,6 +180,7 @@
     <ClInclude Include="SelectUIPanel.h" />
     <ClInclude Include="SoundEngine.h" />
     <ClInclude Include="StandardGraphicsComponent.h" />
+    <ClInclude Include="TransformComponent.h" />
     <ClInclude Include="UIPanel.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

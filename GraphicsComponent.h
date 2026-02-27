@@ -5,7 +5,7 @@
 #include <SFML/System/Vector2.hpp>
 #include "TransformComponent.g"
 
-class GraphicsComponent : Component
+class GraphicsComponent : public Component
 {
 	std::string m_Type = "graphics";
 	bool m_Enabled = false;

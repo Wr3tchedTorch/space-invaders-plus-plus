@@ -3,7 +3,7 @@
 #include <SFML/Graphics/Rect.hpp>
 #include <string>
 
-class RectColliderComponent : ColliderComponent
+class RectColliderComponent : public ColliderComponent
 {
 private:
 	std::string   m_Tag;

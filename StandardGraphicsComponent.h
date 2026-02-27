@@ -6,7 +6,7 @@
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/System/Vector2.hpp>
 
-class StandardGraphicsComponent : GraphicsComponent
+class StandardGraphicsComponent : public GraphicsComponent
 {
 private:
 	sf::Sprite  m_Sprite;

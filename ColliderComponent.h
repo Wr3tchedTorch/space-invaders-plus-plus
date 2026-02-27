@@ -4,7 +4,7 @@
 #include "GameObjectSharer.h"
 #include "GameObject.h"
 
-class ColliderComponent : Component
+class ColliderComponent : public Component
 {
 private:
 	bool m_Enabled = false;
