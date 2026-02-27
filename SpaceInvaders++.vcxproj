@@ -145,6 +145,7 @@
     <ClCompile Include="GameUIPanel.cpp" />
     <ClCompile Include="GraphicsComponent.cpp" />
     <ClCompile Include="InvaderUpdateComponent.cpp" />
+    <ClCompile Include="PlayerUpdateComponent.cpp" />
     <ClCompile Include="RectColliderComponent.cpp" />
     <ClCompile Include="SelectInputHandler.cpp" />
     <ClCompile Include="SelectScreen.cpp" />
@@ -176,6 +177,7 @@
     <ClInclude Include="GraphicsComponent.h" />
     <ClInclude Include="InputHandler.h" />
     <ClInclude Include="InvaderUpdateComponent.h" />
+    <ClInclude Include="PlayerUpdateComponent.h" />
     <ClInclude Include="RectColliderComponent.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="ScreenManager.h" />
