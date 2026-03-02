@@ -17,7 +17,7 @@ void RectColliderComponent::setColliderRect(sf::FloatRect rect)
 	m_CollisionRect = rect;
 }
 
-const sf::FloatRect& RectColliderComponent::getColliderRect()
+sf::FloatRect& RectColliderComponent::getColliderRect()
 {
 	return m_CollisionRect;
 }

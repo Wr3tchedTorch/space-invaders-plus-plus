@@ -7,6 +7,7 @@
 #include "GraphicsComponent.h"
 #include "UpdateComponent.h"
 #include "TransformComponent.h"
+#include <SFML/Graphics/Rect.hpp>
 
 class GameObject
 {
@@ -39,10 +40,10 @@ public:
 	void start(GameObjectSharer* gameObjectSharer);
 	void setActive();
 	void setInactive();
-	bool getIsActive();
+	bool isActive();
 
 	std::string getTag();
-	void setTag(std::string);
+	void setTag(std::string toTag);
 
 	sf::FloatRect& getEncompassingRectCollider();
 	bool hasCollider();

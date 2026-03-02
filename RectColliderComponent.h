@@ -16,7 +16,7 @@ public:
 	std::string getColliderTag();
 
 	void setColliderRect(sf::FloatRect rect);
-	const sf::FloatRect& getColliderRect();
+	sf::FloatRect& getColliderRect();
 
 	std::string getSpecificType() override
 	{
