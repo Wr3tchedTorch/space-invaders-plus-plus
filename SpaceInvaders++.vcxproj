@@ -150,6 +150,7 @@
     <ClCompile Include="InvaderUpdateComponent.cpp" />
     <ClCompile Include="ObjectTags.cpp" />
     <ClCompile Include="PlayerUpdateComponent.cpp" />
+    <ClCompile Include="PlayModeObjectLoader.cpp" />
     <ClCompile Include="RectColliderComponent.cpp" />
     <ClCompile Include="SelectInputHandler.cpp" />
     <ClCompile Include="SelectScreen.cpp" />
@@ -186,6 +187,7 @@
     <ClInclude Include="InvaderUpdateComponent.h" />
     <ClInclude Include="ObjectTags.h" />
     <ClInclude Include="PlayerUpdateComponent.h" />
+    <ClInclude Include="PlayModeObjectLoader.h" />
     <ClInclude Include="RectColliderComponent.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="ScreenManager.h" />
