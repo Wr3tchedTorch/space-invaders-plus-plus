@@ -11,6 +11,7 @@
 #include "GameOverUIPanel.h"
 #include <memory>
 #include <utility>
+#include "BulletSpawner.h"
 
 bool GameScreen::m_GameOver;
 
@@ -85,4 +86,26 @@ void GameScreen::draw(sf::RenderTarget& target)
 	target.draw(m_BackgroundSprite);
 
 	Screen::draw(target);
+}
+
+BulletSpawner* GameScreen::getBulletSpawner()
+{
+	return this;
+}
+
+void GameScreen::spawnBullet(sf::Vector2f startPosition, bool forPlayer)
+{
+	if (!forPlayer)
+	{
+		m_InvaderBulletSpawnLocation	 = startPosition;
+		m_WaitingToSpawnBulletForInvader = true;
+		return;
+	}
+	if (m_BulletClock.getElapsedTime().asMilliseconds() <= 500)
+	{
+		return;
+	}
+	m_PlayerBulletSpawnLocation		= startPosition;
+	m_WaitingToSpawnBulletForPlayer = true;	
+	m_BulletClock.restart();
 }
