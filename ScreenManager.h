@@ -8,14 +8,17 @@
 #include "BitmapStore.h"
 #include "ScreenManagerRemoteControl.h"
 #include "Screen.h"
-//#include "LevelManager.h"
+#include "LevelManager.h"
+#include <vector>
+#include "GameObject.h"
+#include "GameObjectSharer.h"
 
 
 class ScreenManager : public ScreenManagerRemoteControl
 {
 private:
 	std::unordered_map<std::string, std::unique_ptr<Screen>> m_Screens;
-	//LevelManager m_LevelManager;
+	LevelManager m_LevelManager;
 
 protected:
 	std::string m_CurrentScreen = "Select";
@@ -37,19 +40,19 @@ public:
 
 	void ScreenManagerRemoteControl::loadLevelInPlayMode(std::string screenToLoad)
 	{
-		//m_LevelManager.getGameObjects().clear();
-		//m_LevelManager.loadGameObjectsForPlayMode(screenToLoad);
+		m_LevelManager.getGameObjects().clear();
+		m_LevelManager.loadGameObjectsForPlayMode(screenToLoad);
 		switchScreens("Game");
 	}
 
-	//vector<GameObjects>& ScreenManagerRemoteControl::getGameObjects()
-	//{
-	//	return m_LevelManager.getGameObjects();
-	//}
+	std::vector<GameObject>& ScreenManagerRemoteControl::getGameObjects()
+	{
+		return m_LevelManager.getGameObjects();
+	}
 
-	//GameObjectSharer& ScreenManagerRemoteControl::shareGameObjectSharer()
-	//{
-	//	return m_LevelManager;
-	//}
+	GameObjectSharer& ScreenManagerRemoteControl::shareGameObjectSharer()
+	{
+		return m_LevelManager;
+	}
 };
 

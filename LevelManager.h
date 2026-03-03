@@ -2,8 +2,9 @@
 #include <vector>
 #include "GameObject.h"
 #include <string>
+#include "GameObjectSharer.h"
 
-class LevelManager : GameObjectSharer
+class LevelManager : public GameObjectSharer
 {
 private:
 	std::vector<GameObject> m_GameObjects;
