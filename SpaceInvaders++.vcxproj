@@ -150,6 +150,7 @@
     <ClCompile Include="GameUIPanel.cpp" />
     <ClCompile Include="GraphicsComponent.cpp" />
     <ClCompile Include="InvaderUpdateComponent.cpp" />
+    <ClCompile Include="LevelManager.cpp" />
     <ClCompile Include="ObjectTags.cpp" />
     <ClCompile Include="PlayerUpdateComponent.cpp" />
     <ClCompile Include="PlayModeObjectLoader.cpp" />
@@ -189,6 +190,7 @@
     <ClInclude Include="GraphicsComponent.h" />
     <ClInclude Include="InputHandler.h" />
     <ClInclude Include="InvaderUpdateComponent.h" />
+    <ClInclude Include="LevelManager.h" />
     <ClInclude Include="ObjectTags.h" />
     <ClInclude Include="PlayerUpdateComponent.h" />
     <ClInclude Include="PlayModeObjectLoader.h" />

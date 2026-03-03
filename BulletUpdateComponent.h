@@ -4,6 +4,9 @@
 #include <string>
 #include <memory>
 #include "RectColliderComponent.h"
+#include <SFML/System/Vector2.hpp>
+#include "GameObject.h"
+#include "GameObjectSharer.h"
 
 class BulletUpdateComponent : public UpdateComponent
 {

@@ -3,6 +3,10 @@
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <string>
 #include <SFML/System/Vector2.hpp>
+#include <memory>
+#include "GameObject.h"
+#include "GameObjectSharer.h"
+#include "TransformComponent.h"
 #include "TransformComponent.g"
 
 class GraphicsComponent : public Component

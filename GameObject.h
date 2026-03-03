@@ -8,6 +8,7 @@
 #include "UpdateComponent.h"
 #include "TransformComponent.h"
 #include <SFML/Graphics/Rect.hpp>
+#include "GameObjectSharer.h"
 
 class GameObject
 {

@@ -1,5 +1,7 @@
 #include "ColliderComponent.h"
 #include <string>
+#include "GameObject.h"
+#include "GameObjectSharer.h"
 
 std::string ColliderComponent::getType()
 {

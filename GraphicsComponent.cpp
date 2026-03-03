@@ -1,4 +1,7 @@
 #include "GraphicsComponent.h"
+#include <string>
+#include "GameObject.h"
+#include "GameObjectSharer.h"
 
 std::string GraphicsComponent::getType()
 {

@@ -3,6 +3,9 @@
 #include <memory>
 #include "TransformComponent.h"
 #include "RectColliderComponent.h"
+#include <string>
+#include "GameObject.h"
+#include "GameObjectSharer.h"
 
 class InvaderUpdateComponent : public UpdateComponent
 {
@@ -37,11 +40,11 @@ public:
 
 	void start(GameObjectSharer* gameObjectSharer, GameObject* parent) override
 	{
-		m_PlayerTransformComponent = std::static_pointer_cast<TransformComponent>(gameObjectSharer->findFirstObjectWithTag("Player")->getComponentByTypeAndSpecificType("transform", "transform"));
-		m_PlayerRectColliderComponent = std::static_pointer_cast<RectColliderComponent>(gameObjectSharer->findFirstObjectWithTag("Player")->getComponentByTypeAndSpecificType("collider", "rect"));
+		m_PlayerTransformComponent    = std::static_pointer_cast<TransformComponent>(gameObjectSharer->findFirstObjectWithTag("Player").getComponentByTypeAndSpecificType("transform", "transform"));
+		m_PlayerRectColliderComponent = std::static_pointer_cast<RectColliderComponent>(gameObjectSharer->findFirstObjectWithTag("Player").getComponentByTypeAndSpecificType("collider", "rect"));
 
-		m_TransformComponent    = std::static_pointer_cast<TransformComponent>(gameObjectSharer->getComponentByTypeAndSpecificType("transform", "transform"));
-		m_RectColliderComponent = std::static_pointer_cast<RectColliderComponent>(gameObjectSharer->getComponentByTypeAndSpecificType("collider", "rect"));
+		m_TransformComponent    = std::static_pointer_cast<TransformComponent>(parent->getComponentByTypeAndSpecificType("transform", "transform"));
+		m_RectColliderComponent = std::static_pointer_cast<RectColliderComponent>(parent->getComponentByTypeAndSpecificType("collider", "rect"));
 	}
 
 	void update(float delta) override;

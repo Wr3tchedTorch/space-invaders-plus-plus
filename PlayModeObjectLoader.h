@@ -3,13 +3,15 @@
 #include "GameObject.h"
 #include <string>
 #include <vector>
+#include "GameObjectFactoryPlayMode.h"
+
 class PlayModeObjectLoader
 {
-public:
-	BlueprintObjectParser m_BlueprintObjectParser;
-	GameObjectFactoryPlaymode m_GameObjectFactoryPlaymode;
-
 private:
+	BlueprintObjectParser m_BlueprintObjectParser;
+	GameObjectFactoryPlayMode m_GameObjectFactoryPlaymode;
+
+public:
 	void loadGameObjectsForPlayMode(std::vector<GameObject>& out, std::string filepath);
 };
 

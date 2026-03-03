@@ -10,6 +10,7 @@
 #include "Component.h"
 #include "GraphicsComponent.h"
 #include "TransformComponent.h"
+#include "GameObjectSharer.h"
 
 void GameObject::update(float delta)
 {
